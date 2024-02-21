@@ -1,0 +1,17 @@
+
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434/
+      chat:
+        model: llama2
+      embedding:
+        model: llama2
+
+  datasource:
+    url: jdbc:postgresql://localhost/vector_store
+    username: postgres
+    password: postgres
+
+  autoconfigure:
+    exclude: org.springframework.ai.autoconfigure.vectorstore.pgvector.PgVectorStoreAutoConfiguration

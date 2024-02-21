@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Max Musterman",
+    "age": "32",
+    "team": "Bayern München",
+    "country": "germany"
+  },
+  {
+    "name": "Melanie Musterfrau",
+    "age": "29",
+    "team": "Borussia Dortmund",
+    "country": "germany"
+  },
+  {
+    "name": "Peter Writh",
+    "age": "29",
+    "team": "Arsenal London",
+    "country": "england"
+  },
+  {
+    "name": "Lisa Adams",
+    "age": "25",
+    "team": "Manchester United",
+    "country": "england"
+  }
+]
