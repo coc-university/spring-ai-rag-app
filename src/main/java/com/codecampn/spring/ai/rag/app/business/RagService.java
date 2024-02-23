@@ -4,13 +4,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.messages.Message;
 import org.springframework.ai.chat.prompt.SystemPromptTemplate;
 import org.springframework.ai.document.Document;
-import org.springframework.ai.embedding.EmbeddingClient;
 import org.springframework.ai.reader.JsonReader;
-import org.springframework.ai.vectorstore.PgVectorStore;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -45,7 +42,7 @@ public class RagService {
         List<Document> similarDocuments = vectorStore.similaritySearch(query);
         String documents = similarDocuments
                 .stream()
-                .map(entry -> entry.getContent())
+                .map(Document::getContent)
                 .collect(Collectors.joining("\n"));
 
         SystemPromptTemplate systemPromptTemplate = new SystemPromptTemplate(footballerPrompt);

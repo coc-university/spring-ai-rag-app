@@ -66,6 +66,8 @@
 		</plugins>
 	</build>
 
+	<!-- we need this repositories block because of 0.8.0-SNAPSHOT jar files -->
+
 	<repositories>
 		<repository>
 			<id>spring-milestones</id>

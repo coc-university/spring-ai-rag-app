@@ -14,4 +14,5 @@ spring:
     password: postgres
 
   autoconfigure:
+    # maybe delete this
     exclude: org.springframework.ai.autoconfigure.vectorstore.pgvector.PgVectorStoreAutoConfiguration
