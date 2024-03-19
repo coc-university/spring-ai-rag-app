@@ -21,11 +21,13 @@ public class ChatController {
     @GetMapping("/")
     public ChatResponseDto chat(@RequestParam String query) {
         UserMessage userMessage = new UserMessage(query);
+        log.info("User Message query: \n \n" + query + "\n");
+
         Message systemMessage = ragService.loadSimilarDocumentsAndCreateSystemMessage(query);
 
         ChatResponseDto dto = chatService.chatWithLlm(systemMessage, userMessage);
 
-        log.info(dto.getAnswer());
+        log.info("Answer: \n \n" + dto.getAnswer());
         return dto;
     }
 }
