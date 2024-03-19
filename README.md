@@ -12,7 +12,11 @@
 
 - this project uses snapshot dependencies (work in progress)
 - so they will definitely change in the future
-- check pom.xml
+- check the following:
+  - [Snapshot Artifactory](https://repo.spring.io/ui/native/snapshot/org/springframework/ai/)
+  - [Milestone Artifactory](https://repo.spring.io/ui/native/milestone/org/springframework/ai/)
+  - [Release Calendar](https://calendar.spring.io/)
+- maybe adjust pom.xml
 
 ## Setup:
 

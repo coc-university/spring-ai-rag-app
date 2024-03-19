@@ -25,19 +25,16 @@
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
-			<version>0.8.0-SNAPSHOT</version>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-pgvector-store-spring-boot-starter</artifactId>
-			<version>0.8.0-SNAPSHOT</version>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jdbc</artifactId>
-		</dependency>
+		<!-- old school spring dependencies start here -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -66,7 +63,7 @@
 		</plugins>
 	</build>
 
-	<!-- we need this repositories block because of 0.8.0-SNAPSHOT jar files -->
+	<!-- we need this repositories block because of the SNAPSHOT dependencies above -->
 
 	<repositories>
 		<repository>
